@@ -1,3 +1,8 @@
+# Work folders
+OLD/
+test/
+Plots/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
