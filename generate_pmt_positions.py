@@ -108,7 +108,8 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
             x = round(radius * cos(theta), 1)
             y = round(radius * sin(theta), 1)
             positions.append((x, y, level))
-            directions.append((-1 * round(cos(theta), 4), (-1 * round(sin(theta), 4)), -1 * sign(level)))
+            # directions.append((-1 * round(cos(theta), 4), (-1 * round(sin(theta), 4)), -1 * sign(level))) # this is only okay on lateral surfaces
+            directions.append((0, 0, -1 * sign(level)))
 
         if level > 0:
             print(
@@ -116,5 +117,6 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
             )
 
     # print(positions)
+    # print(directions)
 
     return positions, directions
