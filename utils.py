@@ -74,42 +74,42 @@ def write_PMTINFO_file(file_name, x, y, z, dir_x, dir_y, dir_z, pmt_type, R, H):
         for element in x:
             file.write(str(element) + ",")
         file.write("],\n")
-        print(f"len(x) = {len(x)} elements")
+        # print(f"len(x) = {len(x)} elements")
 
         file.write('"y": ')
         file.write("[")
         for element in y:
             file.write(str(element) + ",")
         file.write("],\n")
-        print(f"len(y) = {len(y)} elements")
+        # print(f"len(y) = {len(y)} elements")
 
         file.write('"z": ')
         file.write("[")
         for element in z:
             file.write(str(element) + ",")
         file.write("],\n")
-        print(f"len(z) = {len(z)} elements")
+        # print(f"len(z) = {len(z)} elements")
 
         file.write('"dir_x": ')
         file.write("[")
         for element in dir_x:
             file.write(str(element) + ",")
         file.write("],\n")
-        print(f"len(dir_x) = {len(dir_x)} elements")
+        # print(f"len(dir_x) = {len(dir_x)} elements")
 
         file.write('"dir_y": ')
         file.write("[")
         for element in dir_y:
             file.write(str(element) + ",")
         file.write("],\n")
-        print(f"len(dir_y) = {len(dir_y)} elements")
+        # print(f"len(dir_y) = {len(dir_y)} elements")
 
         file.write('"dir_z": ')
         file.write("[")
         for element in dir_z:
             file.write(str(element) + ",")
         file.write("],\n")
-        print(f"len(dir_z) = {len(dir_z)} elements")
+        # print(f"len(dir_z) = {len(dir_z)} elements")
 
         file.write('"pmt_type": ')
         file.write("[")
@@ -117,6 +117,6 @@ def write_PMTINFO_file(file_name, x, y, z, dir_x, dir_y, dir_z, pmt_type, R, H):
             file.write(str(element) + ",")
         file.write("]\n")
         file.write("}")
-        print(f"len(pmt_type) = {len(pmt_type)} elements")
+        # print(f"len(pmt_type) = {len(pmt_type)} elements")
 
     print(f"{file_name} data has been saved to file ", filename)
