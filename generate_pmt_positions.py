@@ -125,11 +125,17 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
     return positions, directions
 
 
-def generate_circle_grid_positions(R, H, r_PMT, nT, top):
+def generate_circle_grid_positions(R, H, r_PMT, n_rows, n_cols, top):
 
     SK_circumference = 2*pi*16900
-    this_circumference = 2*pi*R
-    grid_spacing = 1000  # * (this_circumference/SK_circumference)
+    C = 2*pi*R
+
+    grid_spacing = 1000  # HK
+    grid_spacing = 700  # SK
+
+    row_spacing, col_spacing = get_spacing(n_rows, n_cols, C, H)
+
+    grid_spacing = col_spacing
 
     if (grid_spacing < 1.05 * 2*r_PMT):
         if top:
