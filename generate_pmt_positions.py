@@ -58,9 +58,6 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
     dR = round(float(R / n_circles), 1)
     circle_r = dR / 2
 
-    # # check PMTs overlapping in the smallest circumference
-    # if
-
     circles.append((dR / 2, 2 * pi * dR / 2, 0, 0))  # (circ_radius, circle_length, offset, offset_polar)
     for i_r in range(n_circles - 1):
         circle_r += dR
@@ -127,7 +124,7 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
 
 def generate_circle_grid_positions(R, H, r_PMT, n_rows, n_cols, top):
 
-    SK_circumference = 2*pi*16900
+    # SK_circumference = 2*pi*16900
     C = 2*pi*R
 
     grid_spacing = 1000  # HK
