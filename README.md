@@ -171,26 +171,42 @@ The tool uses an intelligent placement algorithm that:
        alt="r = 3200 mm, H = 5400 mm">
   <br>
   <em>
-    Comparison of the two endcap styles. Detector size: r = 16.9 m, H = 36.2 m;
+    Comparison of the two endcap styles. Detector size: r = 3.0 m, H = 5.4 m;
     PMT radius = 254.0 mm. Shown: 2×48 PMTs over 249 total PMTs, 40% coverage.
   </em>
 </p>
 
 <p align="center">
-  <img src="docs/images/small_detector/03_3d_lateral_R3200.0_H5400.0.png"
-       width="300"
+  <img src="docs/images/small_detector/04_3d_top_bot_R3200.0_H5400.0_GRID.png"
+       width="400"
        alt="r = 3200 mm, H = 5400 mm"
        style="margin-right: 12px;">
   <img src="docs/images/small_detector/04_3d_top_bot_R3200.0_H5400.0_CIRC.png"
-       width="300"
+       width="400"
        alt="r = 3200 mm, H = 5400 mm">
-  <img src="docs/images/small_detector/04_3d_top_bot_R3200.0_H5400.0_CIRC.png"
-       width="300"
+  <img src="docs/images/small_detector/03_3d_lateral_R3200.0_H5400.0.png"
+       width="400"
        alt="r = 3200 mm, H = 5400 mm">
   <br>
   <em>
-    Comparison of the two endcap styles. Detector size: r = 16.9 m, H = 36.2 m;
-    PMT radius = 254.0 mm. Shown: 2×48 PMTs over 249 total PMTs, 40% coverage.
+    3D views lateral and endcap surfaces of a r = 3.0 m, H = 5.4 m detector with 40% coverage, PMT radius = 254.0 mm. 
+  </em>
+</p>
+
+<p align="center">
+  <img src="docs/images/small_detector/07_3d_top_bot_R3200.0_H5400.0_GRID.png"
+       width="400"
+       alt="r = 3200 mm, H = 5400 mm"
+       style="margin-right: 12px;">
+  <img src="docs/images/small_detector/07_3d_top_bot_R3200.0_H5400.0_CIRC.png"
+       width="400"
+       alt="r = 3200 mm, H = 5400 mm">
+  <img src="docs/images/small_detector/06_3d_lateral_R3200.0_H5400.0.png"
+       width="400"
+       alt="r = 3200 mm, H = 5400 mm">
+  <br>
+  <em>
+    3D views lateral and endcap surfaces of a r = 3.0 m, H = 5.4 m detector with 40% coverage, PMT radius = 254.0 mm. PMT dimensions are on scale with the detector
   </em>
 </p>
 
