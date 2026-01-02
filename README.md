@@ -110,8 +110,8 @@ When you run the tool with your parameters, it will:
 ## Output
 
 The tool generates:
-- **Geometry files**: RAT-PAC 2 compatible configuration files with PMT positions
-- **PMT coordinates**: Complete list of PMT positions and orientations
+- **PMTINFO file**: RAT-PAC 2 configuration file with PMT positions
+- **PMT coordinates**: Complete list of PMT types, positions and orientations
 - **Visualization plots**: Multiple views for visual verification of PMT layout
   - 3D detector view
   - Cylindrical surface unwrapping
@@ -124,7 +124,7 @@ After running the tool, review the generated plots to verify:
 - PMTs are evenly distributed across the detector surface
 - No PMT overlap occurs
 - Coverage meets your requirements
-- Endcap PMT arrangements (if enabled)
+- Endcap PMT arrangements
 
 ## PMT Placement Algorithm
 
@@ -206,7 +206,7 @@ The tool uses an intelligent placement algorithm that:
        alt="r = 3200 mm, H = 5400 mm">
   <br>
   <em>
-    3D views lateral and endcap surfaces of a r = 3.0 m, H = 5.4 m detector with 40% coverage, PMT radius = 254.0 mm. PMT dimensions are on scale with the detector
+    3D views lateral and endcap surfaces of a r = 3.0 m, H = 5.4 m detector with 40% coverage, PMT radius = 254.0 mm. PMT dimensions are on scale with the detector size
   </em>
 </p>
 
