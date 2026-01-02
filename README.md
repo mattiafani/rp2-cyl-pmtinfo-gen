@@ -142,8 +142,8 @@ The tool uses an intelligent placement algorithm that:
 </p>
 
 <p align="center">
-  <img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_CIRC.png" width="600" alt="r = 16900 mm, H = 36200 mm">
-<img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_GRID.png" width="600" alt="r = 16900 mm, H = 36200 mm"><br>
+  <img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_CIRC.png" width="300" alt="r = 16900 mm, H = 36200 mm">
+<img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_GRID.png" width="300" alt="r = 16900 mm, H = 36200 mm"><br>
   <em>Comparison on the two endcap styles. Detector size: r = 16.9 m, H = 36.2 m; PMT radius = 254.0 mm. Shown: 2x1666 PMTs over 16900 total PMTs, 30% coverage</em>
 </p>
 
@@ -153,8 +153,8 @@ The tool uses an intelligent placement algorithm that:
 </p>
 
 <p align="center">
-  <img src="docs/images/small_detector/02_open_top_bot_R3200.0_H5400.0_CIRC.png" width="600" alt="r = 3200 mm, H = 5400 mm">
-<img src="docs/images/small_detector/02_open_top_bot_R3200.0_H5400.0_GRID.png" width="600" alt="r = 1690 mm, H = 3620 mm"><br>
+  <img src="docs/images/small_detector/02_open_top_bot_R3200.0_H5400.0_CIRC.png" width="300" alt="r = 3200 mm, H = 5400 mm">
+<img src="docs/images/small_detector/02_open_top_bot_R3200.0_H5400.0_GRID.png" width="300" alt="r = 1690 mm, H = 3620 mm"><br>
   <em>Comparison on the two endcap styles. Detector size: r = 16.9 m, H = 36.2 m; PMT radius = 254.0 mm. Shown: 2x48 PMTs over 249 total PMTs, 40% coverage</em>
 </p>
 
