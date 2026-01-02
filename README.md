@@ -194,14 +194,14 @@ The tool uses an intelligent placement algorithm that:
 </p>
 
 <p align="center">
-  <img src="docs/images/small_detector/07_3d_top_bot_R3200.0_H5400.0_GRID.png"
+  <img src="docs/images/small_detector/07_3d_top_bot_pmtscale_R3200.0_H5400.0_CIRC.png"
        width="400"
        alt="r = 3200 mm, H = 5400 mm"
        style="margin-right: 12px;">
-  <img src="docs/images/small_detector/07_3d_top_bot_R3200.0_H5400.0_CIRC.png"
+  <img src="docs/images/small_detector/07_3d_top_bot_pmtscale_R3200.0_H5400.0_GRID.png"
        width="400"
        alt="r = 3200 mm, H = 5400 mm">
-  <img src="docs/images/small_detector/06_3d_lateral_R3200.0_H5400.0.png"
+  <img src="docs/images/small_detector/06_3d_lateral_pmtscale_R3200.0_H5400.0.png"
        width="400"
        alt="r = 3200 mm, H = 5400 mm">
   <br>
