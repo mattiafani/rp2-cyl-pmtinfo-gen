@@ -8,11 +8,11 @@ This tool automates the generation of geometry configuration files for cylindric
 
 ## Key Features
 
-- **Coverage-based PMT placement**: Automatically determines the number and position of PMTs per surface, based on requested detector coverage
+- **Coverage-based PMT placement**: Automatically determines the number and position of PMTs based on requested detector coverage
 - **Overlap prevention**: Ensures PMTs do not overlap while maintaining optimal spacing
 - **Cylindrical geometry support**: Handles both cylindrical barrel surfaces and endcap configurations
 - **Visual verification**: Generates plots for visual inspection of PMT layouts
-- **RAT-PAC 2 compatibility**: Outputs PMTINFO files in RAT-PAC 2 format
+- **RAT-PAC 2 compatibility**: Outputs geometry files in RAT-PAC 2 format
 - **Batch processing**: Supports generating multiple configurations efficiently
 
 ## How It Works
@@ -42,37 +42,59 @@ cd rp2-cyl-pmtinfo-gen
 
 ### Basic Usage
 
-Run the main script with the following parameters:
+Run the main script with the following required parameters:
 
 ```bash
-python3 py.py <R[mm]> <H[mm]> <bool_endcaps_pmt_grid> <bool_nicer_plots> <bool_run_batch>
+python3 py.py --radius <R[mm]> --height <H[mm]> --coverage <fraction>
 ```
 
-**Parameters:**
-- `R[mm]`: Radius of the cylindrical detector in millimeters
-- `H[mm]`: Height of the cylindrical detector in millimeters
-- `bool_endcaps_pmt_grid`: Enable/disable PMT grid on endcaps (`True`/`False`)
-- `bool_nicer_plots`: Enable enhanced visualization (`True`/`False`)
-- `bool_run_batch`: Enable batch processing mode (`True`/`False`)
-
-### Example
-
+Or use short flags:
 ```bash
-python3 py.py 16900 18100 True False True
+python3 py.py -r <R[mm]> -H <H[mm]> -c <fraction>
 ```
 
-This generates geometry files for a detector with:
-- Radius: 16.9 meters
-- Height: 18.1 meters
-- PMT grid on endcaps enabled
-- Standard plotting
-- Batch mode enabled
+**Required Parameters:**
+- `-r, --radius`: Radius of the cylindrical detector in millimeters
+- `-H, --height`: Height of the cylindrical detector in millimeters
+- `-c, --coverage`: Desired PMT coverage as a fraction (e.g., 0.30 for 30%)
 
-The tool will automatically:
-- Calculate the number of PMTs needed for the requested coverage
-- Position PMTs to avoid overlap
-- Generate visualization plots for verification
-- Output RAT-PAC 2 compatible geometry files
+**Optional Parameters:**
+- `--endcaps`: Enable PMT grid on detector endcaps
+- `--nice-plots`: Enable enhanced visualization
+- `--batch`: Enable batch processing mode
+- `-o, --output`: Output directory (default: `output`)
+- `--no-plots`: Skip plot generation
+
+### Examples
+
+**Basic detector with 30% coverage:**
+```bash
+python3 py.py -r 16900 -H 18100 -c 0.30
+```
+
+**Detector with endcaps and 40% coverage:**
+```bash
+python3 py.py --radius 16900 --height 18100 --coverage 0.40 --endcaps
+```
+
+**Full configuration with enhanced plots:**
+```bash
+python3 py.py -r 16900 -H 18100 -c 0.35 --endcaps --nice-plots --batch
+```
+
+**Custom output directory:**
+```bash
+python3 py.py -r 16900 -H 18100 -c 0.30 --output my_detector_config
+```
+
+### What the Tool Does
+
+When you run the tool with your parameters, it will:
+1. Calculate the number of PMTs needed to achieve your requested coverage
+2. Position PMTs optimally to avoid overlap
+3. Generate RAT-PAC 2 compatible geometry files
+4. Create visualization plots for verification (unless `--no-plots` is specified)
+5. Display a summary of the generated configuration
 
 ## File Structure
 
