@@ -143,11 +143,11 @@ The tool uses an intelligent placement algorithm that:
 
 <p align="center">
   <img src="docs/images/small_detector/02_open_top_bot_R16900.0_H36200.0_CIRC.png"
-       width="300"
+       width="400"
        alt="r = 16900 mm, H = 36200 mm"
        style="margin-right: 12px;">
   <img src="docs/images/small_detector/02_open_top_bot_R16900.0_H36200.0_GRID.png"
-       width="300"
+       width="400"
        alt="r = 16900 mm, H = 36200 mm"
   <br>
   <em>
@@ -163,11 +163,11 @@ The tool uses an intelligent placement algorithm that:
 
 <p align="center">
   <img src="docs/images/small_detector/02_open_top_bot_R3200.0_H5400.0_CIRC.png"
-       width="300"
+       width="400"
        alt="r = 3200 mm, H = 5400 mm"
        style="margin-right: 12px;">
   <img src="docs/images/small_detector/02_open_top_bot_R3200.0_H5400.0_GRID.png"
-       width="300"
+       width="400"
        alt="r = 1690 mm, H = 3620 mm">
   <br>
   <em>
