@@ -45,12 +45,12 @@ cd rp2-cyl-pmtinfo-gen
 Run the main script with the following required parameters:
 
 ```bash
-python3 py.py --radius <R[mm]> --height <H[mm]> --coverage <fraction>
+python3 main.py --radius <R[mm]> --height <H[mm]> --coverage <fraction>
 ```
 
 Or use short flags:
 ```bash
-python3 py.py -r <R[mm]> -H <H[mm]> -c <fraction>
+python3 main.py -r <R[mm]> -H <H[mm]> -c <fraction>
 ```
 
 **Required Parameters:**
@@ -69,22 +69,22 @@ python3 py.py -r <R[mm]> -H <H[mm]> -c <fraction>
 
 **Basic detector with 30% coverage:**
 ```bash
-python3 py.py -r 16900 -H 18100 -c 0.30
+python3 main.py -r 16900 -H 18100 -c 0.30
 ```
 
 **Detector with endcaps and 40% coverage:**
 ```bash
-python3 py.py --radius 16900 --height 18100 --coverage 0.40 --endcaps
+python3 main.py --radius 16900 --height 18100 --coverage 0.40 --endcaps
 ```
 
 **Full configuration with enhanced plots:**
 ```bash
-python3 py.py -r 16900 -H 18100 -c 0.35 --endcaps --nice-plots --batch
+python3 main.py -r 16900 -H 18100 -c 0.35 --endcaps --nice-plots --batch
 ```
 
 **Custom output directory:**
 ```bash
-python3 py.py -r 16900 -H 18100 -c 0.30 --output my_detector_config
+python3 main.py -r 16900 -H 18100 -c 0.30 --output my_detector_config
 ```
 
 ### What the Tool Does
@@ -98,7 +98,7 @@ When you run the tool with your parameters, it will:
 
 ## File Structure
 
-- `py.py`: Main script for geometry generation
+- `main.py`: Main script for geometry generation
 - `generate_pmt_positions.py`: Core logic for calculating PMT positions with overlap prevention
 - `utils.py`: Utility functions for geometry calculations
 - `store_info.py`: Data storage and output file generation
