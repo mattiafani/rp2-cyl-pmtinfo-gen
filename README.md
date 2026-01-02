@@ -118,6 +118,19 @@ The tool generates:
   - Endcap layouts
   - PMT distribution analysis
 
+## PMT Positioning Overview
+
+<p align="center">
+  <img src="docs/images/large_detector/01_open_lateral_R16900.0_H36200.0.png" width="1200" alt="r = 16900 mm, H = 36200 mm"><br>
+  <em>Lateral surface, large detector; 7599 PMTs over 10931 total PMTs, 30% coverage</em>
+</p>
+
+<p align="center">
+  <img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_CIRC.png" width="600" alt="r = 16900 mm, H = 36200 mm"><br>
+<img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_GRID.png" width="600" alt="r = 16900 mm, H = 36200 mm"><br>
+  <em>Comparison on the two endcap styles, large detector; 2x1666 PMTs over 16900 total PMTs, 30% coverage</em>
+</p>
+
 ## Visualization and Verification
 
 After running the tool, review the generated plots to verify:
