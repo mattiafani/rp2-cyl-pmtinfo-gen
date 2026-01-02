@@ -40,7 +40,8 @@ def generate_lateral_positions(R, H, n_rows, n_cols):
             x = round(float(R * cos(theta)), 2)
             y = round(float(R * sin(theta)), 2)
             z = round(float(-H / 2 + row_spacing / 2 + i_row * row_spacing), 2)
-            positions.append((round(float(x), 2), round(float(y), 2), round(float(z), 2)))
+            positions.append((round(float(x), 2), round(
+                float(y), 2), round(float(z), 2)))
             directions.append((round(float(-1 * cos(theta)), 4),
                               (round(float(-1 * sin(theta)), 4)), round(float(0), 1)))
 
@@ -58,7 +59,8 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
     dR = round(float(R / n_circles), 1)
     circle_r = dR / 2
 
-    circles.append((dR / 2, 2 * pi * dR / 2, 0, 0))  # (circ_radius, circle_length, offset, offset_polar)
+    # (circ_radius, circle_length, offset, offset_polar)
+    circles.append((dR / 2, 2 * pi * dR / 2, 0, 0))
     for i_r in range(n_circles - 1):
         circle_r += dR
         # offset = round(col_spacing / (n_circles - i_r), 1)
@@ -82,9 +84,10 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
             n_pmt = 1
 
         # check on overlapping pmts
-        circ_pmt = n_pmt * 2 * r  # sum of all pmt diameters in a circle
+        circ_pmt = n_pmt * 2 * r
 
-        while 1.1 * circ_pmt > circle[1]:  # 1.1 to leave room for pmt installation
+        # for additional room for pmt installation
+        while 1.1 * circ_pmt > circle[1]:
             circ_pmt = n_pmt * 2 * r
             n_pmt = n_pmt - 1
 
@@ -108,12 +111,13 @@ def generate_circle_positions(R, H, r, nT, n_circles, level=0):
             x = round(radius * cos(theta), 2)
             y = round(radius * sin(theta), 2)
             positions.append((round(x, 2), round(y, 2), round(level, 2)))
-            # directions.append((-1 * round(cos(theta), 4), (-1 * round(sin(theta), 4)), -1 * sign(level))) # this is only okay on lateral surfaces
-            directions.append((round(0, 1), round(0, 1), round(-1, 1) * sign(level)))
+            directions.append(
+                (round(0, 1), round(0, 1), round(-1, 1) * sign(level)))
 
         if level > 0:
             print(
-                f"{i+1}: r = {round(radius)} mm, angular offset = {180*offset_polar/pi} deg; PMTs = {n_pmts_per_circle[i]}"
+                f"{i+1}: r = {round(radius)} mm, angular offset\
+                    = {180 * offset_polar/pi} deg; PMTs = {n_pmts_per_circle[i]}"
             )
 
     # print(positions)
@@ -127,22 +131,23 @@ def generate_circle_grid_positions(R, H, r_PMT, n_rows, n_cols, top):
     # SK_circumference = 2*pi*16900
     C = 2*pi*R
 
-    grid_spacing = 1000  # HK
-    grid_spacing = 700  # SK
-
     row_spacing, col_spacing = get_spacing(n_rows, n_cols, C, H)
 
     grid_spacing = col_spacing
 
+    # Specific detector spacings can be set here
+    # grid_spacing = 1000  # HK
+    # grid_spacing = 700  # SK
+
     if (grid_spacing < 1.05 * 2*r_PMT):
         if top:
             print("\n*** WARNING!!! PMTs overlap in top surface ***")
-            print(f" > PMT diameter = {2*r_PMT} mm; grid_spacing = {grid_spacing} mm")
+            print(f" > PMT diameter\
+                  = {2*r_PMT} mm; grid_spacing = {grid_spacing} mm")
 
     positions = []
     directions = []
 
-    # set z and z_dir based on top or bottom
     if top:
         z = float(H/2)
         z_dir = float(-1)
@@ -150,24 +155,21 @@ def generate_circle_grid_positions(R, H, r_PMT, n_rows, n_cols, top):
         z = float(-H/2)
         z_dir = float(1)
 
-    # Allow space for the stainless steel supporting framework
-    # and to avoid overlapping the barrel PMTs
+    # Allow space for the stainless steel supporting framework and to avoid overlapping the barrel PMTs
     r = R - 500
 
-    # Calculate the number of pmts along the diameter
     num_pmts_diameter = int(2 * R / grid_spacing) + 1
 
-    # Loop through each position in the grid
     for i in range(num_pmts_diameter):
         for j in range(num_pmts_diameter):
-            # Calculate x and y coordinates
+
             x = float(-R + i * grid_spacing)
             y = float(-R + j * grid_spacing)
 
-            # Check if the point is within the circle
             if x**2 + y**2 <= r**2:
                 positions.append((round(x, 2), round(y, 2), round(z, 2)))
-                directions.append((round(float(0), 1), round(float(0), 1), round(z_dir, 1)))
+                directions.append(
+                    (round(float(0), 1), round(float(0), 1), round(z_dir, 1)))
 
     # print(positions, directions)
     return positions, directions
