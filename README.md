@@ -118,19 +118,6 @@ The tool generates:
   - Endcap layouts
   - PMT distribution analysis
 
-## PMT Positioning Overview
-
-<p align="center">
-  <img src="docs/images/large_detector/01_open_lateral_R16900.0_H36200.0.png" width="1200" alt="r = 16900 mm, H = 36200 mm"><br>
-  <em>Lateral surface, large detector; 7599 PMTs over 10931 total PMTs, 30% coverage</em>
-</p>
-
-<p align="center">
-  <img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_CIRC.png" width="600" alt="r = 16900 mm, H = 36200 mm"><br>
-<img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_GRID.png" width="600" alt="r = 16900 mm, H = 36200 mm"><br>
-  <em>Comparison on the two endcap styles, large detector; 2x1666 PMTs over 16900 total PMTs, 30% coverage</em>
-</p>
-
 ## Visualization and Verification
 
 After running the tool, review the generated plots to verify:
@@ -146,6 +133,30 @@ The tool uses an intelligent placement algorithm that:
 2. Distributes PMTs uniformly across cylindrical and endcap surfaces
 3. Checks for and prevents any PMT overlap
 4. Optimizes spacing for maximum coverage efficiency
+
+## PMT Positioning Overview
+
+<p align="center">
+  <img src="docs/images/large_detector/01_open_lateral_R16900.0_H36200.0.png" width="1200" alt="r = 16900 mm, H = 36200 mm"><br>
+  <em>Lateral surface, Detector size: r = 16.9 m, H = 36.2 m; PMT radius = 254.0 mm. Shown: 7599 PMTs over 10931 total PMTs, 30% coverage</em>
+</p>
+
+<p align="center">
+  <img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_CIRC.png" width="450" alt="r = 16900 mm, H = 36200 mm"><br>
+<img src="docs/images/large_detector/02_open_top_bot_R16900.0_H36200.0_GRID.png" width="450" alt="r = 16900 mm, H = 36200 mm"><br>
+  <em>Comparison on the two endcap styles. Detector size: r = 16.9 m, H = 36.2 m; PMT radius = 254.0 mm. Shown: 2x1666 PMTs over 16900 total PMTs, 30% coverage</em>
+</p>
+
+<p align="center">
+  <img src="docs/images/small_detector/01_open_lateral_R1690.0_H3620.0.png" width="800" alt="r = 1690 mm, H = 3620 mm"><br>
+  <em>Lateral surface, Detector size: r = 1.69 m, H = 3.62 m; PMT radius = 254.0 mm. Shown: 80 PMTs over 116 total PMTs, 40% coverage</em>
+</p>
+
+<p align="center">
+  <img src="docs/images/small_detector/02_open_top_bot_R1690.0_H3620.0_CIRC.png" width="450" alt="r = 16900 mm, H = 36200 mm"><br>
+<img src="docs/images/small_detector/02_open_top_bot_R1690.0_H3620.0_GRID.png" width="450" alt="r = 1690 mm, H = 3620 mm"><br>
+  <em>Comparison on the two endcap styles. Detector size: r = 16.9 m, H = 36.2 m; PMT radius = 254.0 mm. Shown: 2x18 PMTs over 116 total PMTs, 40% coverage</em>
+</p>
 
 ## License
 
